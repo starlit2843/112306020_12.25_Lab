@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
+
+		.button-container {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			height: 60px; /* Adjust the height as needed */
+			background-color: #f0f0f0; /* Background color for the button container */
+		}
+
+		.button {
+			padding: 10px 20px;
+			border: none;
+			cursor: pointer;
+			transition: transform 0.2s ease-in-out; 
+		}
+
+		#button1 {
+			background-color: #3498db; /* Button 1 color */
+
+		}
+
+		#button2 {
+			background-color: #e74c3c; /* Button 2 color */
+		}
+
+		#button3 {
+			background-color: #2ecc71; /* Button 3 color */
+		}
+
+		#button4 {
+			background-color: #f39c12; /* Button 4 color */
+		}
+		#button5 {
+			background-color: rebeccapurple; /* Button 4 color */
+		}
+
+		.button:hover {
+			transform: scale(1.1); /* Scale up on hover */
+		}
+	</style>
+	<title >Center"Interactive Buttons"</title>
+</head>
+<body>
+	<h1 align= "center">Interactive Buttons</h1>
+
+		<div class ="button-container">
+			<button id="button1" class="button" onclick ="alert(n1);">1st button</button>
+			<button id="button2" class="button" onclick ="alert(n2);">2nd button</button>
+			<button id="button3" class="button" onclick = "document.body.style.backgroundColor = 'blue';">Button 3</button>
+			<button id="button4" class="button" onclick="document.body.style.backgroundColor = 'green';">Button 4</button>
+			<button id="button5" class="button" onclick = "alert('change to WHITE background color');document.body.style.backgroundColor = 'white';">Reset BG color</button>
+		</div>
+
+
+
+	<script>
+		var n1 = window.prompt("enter first integer");
+		var n2 = window.prompt("enter second integer");
+		if (n1>n2){
+			document.body.style.backgroundColor='lightBlue';
+			document.writeln("<h2 align='center'>"+n1 +">"+n2+"</h2>");
+		} else if (n2>n1){
+			document.body.style.backgroundColor='orange';
+			document.writeln("<h2 align='center'>"+n1 +"<"+n2+"</h2>");
+		} else{
+			document.body.style.backgroundColor='lightyellow';
+			document.writeln("<h2 align='center'>"+n1 +"=="+n2+"</h2>");
+		}
+	</script>
+
+</body>
+</html>
